@@ -1,0 +1,126 @@
+
+.menu-header {
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    position: fixed;
+    z-index: 1024;
+    width: 100%;
+  }
+  
+ 
+  .menu-navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .menu-navbar .italicImg{
+    margin-left: 200px;
+  }
+
+  .menu-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; 
+  }
+  
+  .menu-nav-links li {
+    margin: 0 10px;
+    padding: 6px 15px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .menu-nav-links li:hover {
+    border-color: #dbdfd0;
+    background-color: #dbdfd0;
+  }
+  
+  .menu-nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  .book-table {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .book-table li {
+    margin-right: 100px;
+    padding: 6px 15px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .book-table li:hover {
+    border-color: #333;
+    background-color: #eeeeee;
+  }
+  
+  .book-table a {
+    color: #333;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .menu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        top: auto; /* This allows the header to adjust when the main header height changes */
+        padding: 10px;
+    }
+
+    .menu-navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-nav-links {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .menu-nav-links li {
+        margin: 5px 0;
+    }
+
+    .book-table {
+        margin-top: 10px;
+    }
+
+    .book-table li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-navbar .italicImg {
+        margin-left: 0;
+    }
+
+    .menu-nav-links a {
+        font-size: 15px;
+    }
+
+    .book-table li {
+        font-size: 15px;
+    }
+}
