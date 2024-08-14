@@ -15,12 +15,11 @@
     display: flex;
     background-color:#474747;
     width: 100%;
-    padding: 50px 0px;
+    padding: 50px 50px;
     /* margin-left: 100px; */
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-
     max-width: 1200px;
     margin: 0 auto;
    
@@ -28,7 +27,7 @@
 .firstDiv {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #ADB29E;
 }
 .firstDiv h6{
@@ -59,22 +58,32 @@
 
 
   @media(max-width:768px){
-    .mainDiv{
-        flex-direction: column;
-        justify-content: center;
+    .mainDiv {
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
+        flex-wrap: wrap; 
+        /* padding: 50px 50px; */
     }
+
+    .firstDiv, .secondDiv {
+        width:35%; 
+    }
+
+    .thirdDiv, .fourthDiv {
+        width: 40%; 
+        margin-top: 20px; 
+    }
+
     .firstDiv h6 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%; 
+        width: 100%;
         color: #ADB29E;
     }
-    .secondDiv ul, .thirdDiv ul{
-        list-style-type: none;
-        padding-left: 0;
-        margin: 0; 
+     .img1{
+        width: 20%;
+    }
+    .img2{
+        width: 50%;
     }
   }
+

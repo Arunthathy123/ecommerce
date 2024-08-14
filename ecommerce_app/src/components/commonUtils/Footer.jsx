@@ -12,8 +12,8 @@ const Footer = () => {
           <div className='mainDiv'>
             <div className='firstDiv'>
               <div >
-                <img src={eight1} alt='menuImg'  />
-                <img src={eight2} alt='menuImg'  />
+                <img className='img1' src={eight1} alt='menuImg'  />
+                <img className='img2' src={eight2} alt='menuImg'  />
               </div>
               <div style={{width:'200px', color:'#ADB29E'}}>
                 <h6 >In the new era of technology we look a in the future with certainty and pride to for our company and.</h6>
