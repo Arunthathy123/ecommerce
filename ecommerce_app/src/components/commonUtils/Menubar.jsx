@@ -1,32 +1,44 @@
-import React from 'react'
-import '../../assets/CommonStyle/menubar.css'
-import italicImg from '../../assets/HomeStyles/italicImg.png'
-import vector from '../../assets/HomeStyles/Vector.png'
+import React, { useState } from 'react';
+import '../../assets/CommonStyle/menubar.css';
+import italicImg from '../../assets/HomeStyles/italicImg.png';
+import vector from '../../assets/HomeStyles/Vector.png';
+import { FaBars } from 'react-icons/fa';
+
 const Menubar = () => {
-  return (
+  const [isMenuOpen, setIsmenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsmenuOpen(!isMenuOpen);
+  };
+
+  return ( 
     <div>
       <header className='menu-header'>
-        
         <nav className='menu-navbar'>
-            <div className='italicImg'>
-                <img src={vector} alt='menuImg' />
-                <img src={italicImg} alt='menuImg' />
-            </div>
-            
-            <ul className='menu-nav-links'>
-                <li><a href="#home">Homee</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Menu</a></li>
-                <li><a href="#page">Page</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <ul className='book-table'>
-                <li><a href="#book">Book A Table</a></li>
-            </ul>
-        </nav>
-    </header>
-    </div>
-  )
-}
+          <div className={`italicImg ${isMenuOpen ? 'active' : ''}`}>
+            <img className='img1' src={vector} alt='menuImg' />
+            <img className='img2' src={italicImg} alt='menuImg' />
+          </div>
 
-export default Menubar
+          <ul className={`menu-nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#services">Menu</a></li>
+            <li><a href="#page">Page</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <ul className={`book-table ${isMenuOpen ? 'active' : ''}`}>
+            <li><a href="#book">Book A Table</a></li>
+          </ul>
+
+          <div className='menu-bar-icon' onClick={toggleMenu}>
+            <FaBars />
+          </div>
+        </nav>
+      </header>
+    </div>
+  );
+};
+
+export default Menubar;

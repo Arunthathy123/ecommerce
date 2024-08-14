@@ -1,0 +1,80 @@
+.eighthSection{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background-color:#474747;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    /* padding: 0px 50px; */
+}
+.mainDiv{
+
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background-color:#474747;
+    width: 100%;
+    padding: 50px 0px;
+    /* margin-left: 100px; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+.firstDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #ADB29E;
+}
+.firstDiv h6{
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: normal;
+    
+}
+.secondDiv, .thirdDiv, .fourthDiv {
+    width: 20%; 
+}
+.secondDiv, .thirdDiv, .fourthDiv h5{
+    color:#f3f3f0;
+    font-family: 'DM Sans', sans-serif;
+}
+.secondDiv ul, .thirdDiv ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0; 
+}
+.secondDiv li, .thirdDiv li{
+    margin-bottom: 15px; 
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: normal;
+    color: #DBDFD0;
+  }
+
+
+  @media(max-width:768px){
+    .mainDiv{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .firstDiv h6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%; 
+        color: #ADB29E;
+    }
+    .secondDiv ul, .thirdDiv ul{
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0; 
+    }
+  }

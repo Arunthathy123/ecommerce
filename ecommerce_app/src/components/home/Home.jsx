@@ -14,18 +14,13 @@ import event4 from '../../assets/HomeStyles/event4.png'
 import shefImg from '../../assets/HomeStyles/shefImg.png' 
 import dish1 from '../../assets/HomeStyles/dish1.png'
 import dish2 from '../../assets/HomeStyles/dish2.png'
-import cs1 from '../../assets/HomeStyles/cs1.png'
-import cs2 from '../../assets/HomeStyles/cs2.png'
-import cs3 from '../../assets/HomeStyles/cs3.png'
 import articleImg1 from '../../assets/HomeStyles/articleImg1.png'
 import articleImg2 from '../../assets/HomeStyles/articleImg2.png'
 import articleImg3 from '../../assets/HomeStyles/articleImg3.png'
 import articleImg4 from '../../assets/HomeStyles/articleImg4.png'
 import articleImg5 from '../../assets/HomeStyles/articleImg5.png'
-import eight1 from '../../assets/HomeStyles/eight1.png'
-import eight2 from '../../assets/HomeStyles/eight2.png'
-import eight3 from '../../assets/HomeStyles/eight3.png'
-import eight4 from '../../assets/HomeStyles/eight4.png'
+import CustomerSays from '../commonUtils/CustomerSays';
+import Footer from '../commonUtils/Footer';
 
 const Dishes = [
   {
@@ -75,29 +70,7 @@ const events =[
     description: "In the new era of technology we look in the future with certainty for life.",
   }
 ]
-const Customers =[
-  {
-    title:"“The best restaurant”",
-    description:"Last night, we dined at place and were simply blown away. From the moment we stepped in, we were enveloped in an inviting atmosphere and greeted with warm smiles.",
-    img:cs1,
-    name:"Sophire Robson",
-    place:"Los Angeles, CA"
-  },
-  {
-    title:"“Simply delicious”",
-    description:"Place exceeded my expectations on all fronts. The ambiance was cozy and relaxed, making it a perfect venue for our anniversary dinner. Each dish was prepared and beautifully presented.",
-    img:cs2,
-    name:"Matt Cannon",
-    place:"San Diego, CA"
-  },
-  {
-    title:"“One of a kind restaurant”",
-    description:"The culinary experience at place is first to none. The atmosphere is vibrant, the food - nothing short of extraordinary. The food was the highlight of our evening. Highly recommended.",
-    img:cs3,
-    name:"Andy Smith",
-    place:"San Francisco, CA"
-  }
-]
+
 const articles = [
   {
     img: articleImg2,
@@ -269,31 +242,8 @@ const Home = () => {
 
         {/* --------- sixth section ----------------- */}
 
-        <div className='sixthSection'>
-          <br/>
-            <h1>What Our Customers Say</h1>
-           <div className='customers'>
-           {Customers.map((item, index)=>(
-            <div className='customersCard' key={index}>
-              <div className='title'>
-                <h3 style={{color:"#ad343e", fontFamily:"'DM Sans', sans-serif;"}}>{item.title}</h3>
-                <h6 style={{color:"#414536", fontFamily:"'DM Sans', sans-serif;", fontWeight:'normal', fontSize:'12px'}}>{item.description}</h6>
-              </div>
-
-              <hr className='divider' />
-
-              <div className='reviewer'>
-                <img src={item.img} alt="Reviewer" />
-                <div className='reviewer-details'>
-                  <h6 style={{color:"#414536", fontFamily:"'DM Sans', sans-serif;", fontSize:'12px'}}>{item.name}</h6>
-                  <h6 style={{color:"#414536", fontFamily:"'DM Sans', sans-serif;", fontWeight:'normal', fontSize:'12px'}}>{item.place}</h6>
-                </div>
-              </div>
-            </div>
-
-            ))}
-           </div>
-        </div>
+        
+        <CustomerSays />
 
         {/* ------------ seventh section ------------------ */}
 
@@ -326,54 +276,8 @@ const Home = () => {
         </div>
 
 
-              {/* ------------ eight section ------------------ */}
-        <div className='eighthSection'>
-          <div className='mainDiv'>
-            <div className='firstDiv'>
-              <div >
-                <img src={eight1} alt='menuImg' style={{width:'40px'}} />
-                <img src={eight2} alt='menuImg' style={{width:'50%'}} />
-              </div>
-              <div style={{width:'200px', color:'#ADB29E'}}>
-                <h6 style={{fontFamily:"'DM Sans', sans-serif", fontWeight:'normal',lineHeight: '1.5'}}>In the new era of technology we look a in the future with certainty and pride to for our company and.</h6>
-              </div>
-              <div><img src={eight3} /></div>  
-            </div>
-            <div className='secondDiv'>
-              <h5>Pages</h5>
-              <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Menu</li>
-                <li>Pricing</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>Delivery</li>
-              </ul>
-            </div>
-            <div className='thirdDiv'>
-              <h5>Utility Pages</h5>
-              <ul>
-                <li>Start Here</li>
-                <li>Styleguide</li>
-                <li>Password Protected</li>
-                <li>404 Not Found</li>
-                <li>Licenses</li>
-                <li>Changelog</li>
-                <li>View More</li>
-              </ul>
-            </div>
-            <div className='fourthDiv'>
-              <h5>Follow Us On Instagram</h5>
-              <img src={eight4} style={{width:'70%'}}/>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          
-
-        </div>
+        {/* ------------ eight section ------------------ */}
+        <Footer />
 
         
       </div>

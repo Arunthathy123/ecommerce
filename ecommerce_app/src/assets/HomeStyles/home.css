@@ -483,71 +483,6 @@
 }
 
 
-/* ---------- sixth section ------------- */
-
-.sixthSection {
-    position: relative;
-    display: flex;
-    justify-content: center; 
-    
-    flex-direction: column; 
-    padding: 10px;   
-}
-.sixthSection h1{
-    text-align: center;
-    margin: 0;
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: normal;
-}
-
-.customers{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-top: 20px;
-    justify-content: start;
-    align-items: start;
-  }
-.customersCard {
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    background-color: #f9f9f7; 
-    border-radius: 10px;
-    max-width: 370px; 
-    margin: 10px 10px;
-  }
-  
-  .title {
-    margin-bottom: 20px;
-  }
- 
-  
-  .reviewer {
-    display: flex;
-    align-items: center;
-    gap: 25px; 
-  }
-  
-  .reviewer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .reviewer-details h6 {
-    margin: 0;
-  }
-
-  .divider {
-    border: 0;
-    height: 1px;
-    background-color: #e9ebe2; 
-    margin: 10px 0; 
-  }
-  
 /* -------------- seventh section ----------------- */
 
 .seventhSection{
@@ -646,45 +581,6 @@
     font-family:'DM Sans', sans-serif;
 }
 
-.eighthSection{
-    overflow: hidden;
-    display: flex;
-    background-color:#474747;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-.mainDiv{
-    padding: 50px 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-}
-.firstDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25%; 
-    color: #ADB29E;
-}
-.secondDiv, .thirdDiv, .fourthDiv {
-    width: 20%; 
-}
-.secondDiv, .thirdDiv, .fourthDiv h5{
-    color:#f3f3f0;
-    font-family: 'DM Sans', sans-serif;
-}
-.secondDiv ul, .thirdDiv ul{
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0; 
-}
-.secondDiv li, .thirdDiv li{
-    margin-bottom: 15px; 
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: normal;
-    color: #DBDFD0;
-  }
+/* --------eighth section---------- */
+
+

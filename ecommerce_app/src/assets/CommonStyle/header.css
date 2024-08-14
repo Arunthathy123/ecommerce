@@ -7,7 +7,7 @@
     padding: 10px 10px;
     background-color: #333;
     color: #fff;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: fixed; 
     top: 0; 
     width: 100%; 
@@ -66,7 +66,7 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .header {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
     }
   
@@ -75,12 +75,23 @@
     }
   
     .nav-links {
-      flex-direction: column;
+      flex-direction: row;
       width: 100%;
     }
   
     .nav-links li {
       margin: 5px 0;
     }
+    .social-media a {
+      color: #fff;
+      margin: 0 5px;
+      font-size: 70%;
+    }
+    .logo {
+      font-size: 60%;
+      font-weight: normal;
+      flex-shrink: 0;
+    }
+    
   }
   
