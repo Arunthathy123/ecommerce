@@ -1,22 +1,4 @@
-.main-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1000;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
-  }
-  
-  @media (max-width: 5060px) {
-    .main-container {
-      width: 100%;
-      max-width: 90%;
-    }
-  }
+
   
   /* -------------- first section ---------------- */
   
