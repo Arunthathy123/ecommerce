@@ -1,0 +1,98 @@
+.first_Section_page{
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    padding: 10px; 
+    margin-top: 100px;
+    
+}
+.first_Section_page h1{
+    text-align: center;
+    margin: 1;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+.first_Section_page h5{
+    text-align: center;
+    margin: 0;
+    /* width: 30%; */
+    font-family:  'DM Sans', sans-serif;
+    font-weight: normal; 
+
+}
+
+
+/* -----------  second section ----------- */
+
+
+
+.second_Section_page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    background-color: #f9f9f7;
+}
+
+.card_section_page{
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    width: calc(25% - 20px);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.card_section_page img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.card_section_page h4{
+    font-weight: normal;
+    font-family: 'DM Sans', sans-serif;
+    padding-left: 10px;
+}
+.card_section_page h6{
+    margin-bottom: 0px;
+    font-family: 'DM Sans', sans-serif;
+    color: #9fa295;
+    text-align: start;
+    width: 80%;
+    padding-left: 10px;
+}
+
+@media (max-width: 5000px) {
+    .card_section_page {
+        width: calc(24.33% - 20px); /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .card_section_page {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .second_Section_page{
+        margin-top: 15px;
+    }
+    .card_section_page {
+        width: 100%; /* Full width for mobile devices */
+    }
+}

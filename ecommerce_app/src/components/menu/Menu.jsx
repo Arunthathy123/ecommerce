@@ -24,52 +24,60 @@ import Footer from '../commonUtils/Footer';
 
 const menu = [
   {
-    img :secImg1,
-    price:"$ 9.99",
-    name:"Fried Eggs",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg1,
+    price: "$ 9.99",
+    name: "Fried Eggs",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Breakfast"
   },
   {
-    img :secImg2,
-    price:"$ 15.99",
-    name:"Hawaiian Pizza",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg2,
+    price: "$ 15.99",
+    name: "Hawaiian Pizza",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Main Dishes"
   },
   {
-    img : secImg3,
-    price:"$ 7.25",
-    name:"Martinez Cocktail",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg3,
+    price: "$ 7.25",
+    name: "Martinez Cocktail",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Drinks"
   },
   {
-    img : secImg4,
-    price:"$ 20.99",
-    name:"Butterscotch Cake",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg4,
+    price: "$ 20.99",
+    name: "Butterscotch Cake",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Desserts"
   },
   {
-    img : secImg5,
-    price:"$ 5.89",
-    name:"Mint Lemonade",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg5,
+    price: "$ 5.89",
+    name: "Mint Lemonade",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Drinks"
   },
   {
-    img : secImg6,
-    price:"$ 18.05",
-    name:"Chocolate Icecream",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg6,
+    price: "$ 18.05",
+    name: "Chocolate Icecream",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Desserts"
   },
   {
-    img : secImg7,
-    price:"$ 12.55",
-    name:"Cheese Burger",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg7,
+    price: "$ 12.55",
+    name: "Cheese Burger",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Main Dishes"
   },
   {
-    img : secImg8,
-    price:"$ 12.99",
-    name:"Classic Waffles",
-    discription:"Made with eggs, lettuce, salt, oil and other ingredients."
+    img: secImg8,
+    price: "$ 12.99",
+    name: "Classic Waffles",
+    description: "Made with eggs, lettuce, salt, oil and other ingredients.",
+    category: "Breakfast"
   },
 ]
 
@@ -104,9 +112,13 @@ const onlineSites = [
 ]
 export const Menu = () => {
   const [activeButton, setActiveButton] = useState('All');
+  const [wide, setWide] = useState(false)
+
   const handleButton = (buttonValue) => {
     setActiveButton(buttonValue);
   };
+
+  const filterdMenu = activeButton === 'All' ? menu : menu.filter(item => item.category === activeButton)
  
   return (
     <div>
@@ -120,30 +132,36 @@ export const Menu = () => {
 
           {/* ------------ first section ------------------ */}
 
-          <div className='firstSection'>
-              <h1>Our Menu</h1>
-              <h5>We consider all the drivers of change gives you the components you need to change to create a truly happens.</h5>
-              <div className='buttons'>
-                {['All', 'Breakfast', 'Main Dishes', 'Drinks', 'Desserts'].map((buttonValue)=>(
-                  <Button key={buttonValue} type="submit" className={`buttonsFirst ${activeButton === buttonValue ?'active' : ''}`} buttonValue={buttonValue} onClick={()=>handleButton(buttonValue)}/>
-                ))}
-              </div>
-              
+          <div className='first_Section1'>
+            <h1>Our Menu</h1>
+            <h5>We consider all the drivers of change gives you the components you need to change to create a truly happens.</h5>
+            <div className='buttons'>
+              {['All', 'Breakfast', 'Main Dishes', 'Drinks', 'Desserts'].map((buttonValue) => (
+                <Button 
+                  key={buttonValue} 
+                  type="submit" 
+                  className={`buttonsFirst ${activeButton === buttonValue ? 'active' : ''}`} 
+                  buttonValue={buttonValue} 
+                  onClick={() => handleButton(buttonValue)}
+                />
+              ))}
+            </div>
           </div>
 
             {/* ------------- second section -------------- */}
 
             
-          <div className='secondSection'>   
-            {menu.map((item, index)=>(
-              <div className='card_section' key={index}>
-                <img src={item.img} />
-                <h3>{item.price}</h3>
-                <h4>{item.name}</h4>
-                <h6>{item.discription}</h6>
-              </div>
-            ))}    
+          <div className='secondSection'>
+              {filterdMenu.map((item, index) => (
+                  <div className='card_section' key={index}>
+                      <img src={item.img} alt={item.name} />
+                      <h3>{item.price}</h3>
+                      <h4>{item.name}</h4>
+                      <h6>{item.description}</h6>
+                  </div>
+              ))}
           </div>
+
 
             {/* ------------- third section -------------- */}
 
