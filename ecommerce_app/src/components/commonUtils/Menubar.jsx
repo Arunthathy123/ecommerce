@@ -25,11 +25,11 @@ const Menubar = () => {
             <li><a href="/about">About</a></li>
             <li><a href="/menu">Menu</a></li>
             <li><a href="/page">Page</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
 
           <ul className={`book-table ${isMenuOpen ? 'active' : ''}`}>
-            <li><a href="#book">Book A Table</a></li>
+            <li><a href="/BookeATable">Book A Table</a></li>
           </ul>
 
           <div className='menu-bar-icon' onClick={toggleMenu}>

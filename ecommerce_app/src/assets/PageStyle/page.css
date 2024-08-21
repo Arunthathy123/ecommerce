@@ -14,6 +14,7 @@
     font-size: 2.5rem;
     font-family: 'Playfair Display', serif;
     font-weight: normal;
+    width: 60%;
 }
 .first_Section_page h5{
     text-align: center;
@@ -24,8 +25,16 @@
 
 }
 
+@media (max-width:768px){
+    .first_Section_page{
+        margin-top: 100px;
+    }
+}
+
+
 
 /* -----------  second section ----------- */
+
 
 
 
@@ -39,7 +48,9 @@
     margin-top: 45px;
     margin-bottom: 100px;
     background-color: #f9f9f7;
+    /* background-color: blue; */
 }
+
 
 .card_section_page{
     border: none;
@@ -78,13 +89,13 @@
 
 @media (max-width: 5000px) {
     .card_section_page {
-        width: calc(24.33% - 20px); /* Adjust width for tablets */
+        width: calc(24.33% - 20px); 
     }
 }
 
 @media (max-width: 768px) {
     .card_section_page {
-        width: calc(50% - 20px); /* Adjust width for smaller screens */
+        width: calc(50% - 20px); 
     }
 }
 
@@ -93,6 +104,78 @@
         margin-top: 15px;
     }
     .card_section_page {
-        width: 100%; /* Full width for mobile devices */
+        width: 100%; 
     }
+}
+
+
+/* ------------article ----------------------- */
+
+.second_Section_article{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'DM Sans', sans-serif;
+}
+.second_Section_article img{
+    width: 100%;
+    height: 600px; 
+    object-fit:contain;
+}
+
+.numbered-paragraphs {
+    counter-reset: paragraph;
+}
+
+.numbered-paragraphs p {
+    position: relative;
+    padding-left: 30px; 
+}
+
+.numbered-paragraphs p::before {
+    content: counter(paragraph) ". "; 
+    counter-increment: paragraph; 
+    position: absolute;
+    left: 0; 
+    top: 0; 
+}
+
+.fisrtDivArticle{
+    margin: 100px 0;
+    text-align: justify;
+}
+
+@media(max-width:768px){
+    .first_Section_page{
+        margin-top: 65px;
+    }
+    .first_Section_page h1{  
+        font-size: 2rem;
+        width: 100%;
+    }
+    .first_Section_page h5{
+        font-size: 70%;
+    }
+    .fisrtDivArticle p{
+        font-size: 70%;
+    
+    }
+    .second_Section_article{
+        width: 100%;
+        margin: 0;
+    }
+    .second_Section_article img{
+        width: 100%;
+        height: auto; 
+        object-fit:contain;
+    }
+    .fisrtDivArticle{
+        margin: 50px 0;
+        
+    }
+    
+   
 }

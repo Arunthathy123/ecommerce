@@ -15,6 +15,7 @@ import img10 from '../../assets/PageStyle/img/img10.png'
 import img11 from '../../assets/PageStyle/img/img11.png'
 import img12 from '../../assets/PageStyle/img/img12.png'
 import Footer from '../commonUtils/Footer'
+import {  useNavigate } from 'react-router-dom'
 
 
 const Article =[
@@ -83,6 +84,10 @@ const Article =[
 ]
 
 const Page = () => {
+  const navigate = useNavigate()
+  function articleFn(){
+    navigate("/article")
+  }
   return (
     <div>
         <div>
@@ -104,7 +109,7 @@ const Page = () => {
             
             <div className='second_Section_page'>
               {Article.map((item, index) => (
-                  <div className='card_section_page' key={index}>
+                  <div className='card_section_page' key={index} onClick={articleFn}>
                       <img src={item.img} alt={item.name} />
                       <h6>{item.date}</h6>
                       <h4>{item.description}</h4>

@@ -1,0 +1,196 @@
+.second_section_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0; 
+}
+
+.cardBookAT {
+    width: 50%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    z-index: 1;
+}
+.mapBackground {
+    position: absolute;
+    top: 550px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 0; 
+}
+
+.inputGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 10px;
+    width: 100%;
+    column-gap: 50px;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+    font-size:  1rem; 
+    color: #2c2f24;
+}
+
+
+.Booke_A_table_input, .Booke_A_table_input_person {
+    width: 100%;
+    padding: 9px 25px;
+    font-size: 16px;
+    border: 1px solid #dae5df;
+    border-radius: 50px;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size:  .9rem; 
+
+}
+
+.contact_message{
+    width: 100%;
+    padding: 9px 25px;
+    font-size: 16px;
+    border: 1px solid #dae5df;
+    border-radius: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size:  .9rem;
+    margin-top: 10px; 
+}
+.Booke_A_table_input:focus,.contact_message:focus,
+.Booke_A_table_input_person:focus {
+    border-color: #dae5df; 
+    outline: none; 
+    box-shadow: 0 0 5px #dae5df; 
+}
+
+
+.inputFullWidth {
+    width: 100%;
+    margin-top: 20px;
+    color: #2c2f24;
+    
+}
+
+
+.Book_A_table_Button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ad343e;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+.footer {
+
+    margin-top: 440px; 
+}
+
+@media (max-width: 664px) {
+    .footer {
+        margin-top: 350px; 
+    }
+    .second_section_2{
+        padding: 0;
+        margin: 0;
+    }
+    .cardBookAT{
+        width: 100%;
+        padding: 10px;
+    }
+    .inputGrid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .Booke_A_table_input {
+        width: 100%;
+        height: 60%;  
+        font-size: 80%;      
+    }
+
+    .inputFullWidth {
+        grid-column: span 2;
+        height: 60%;  
+         
+    }
+    .input-field label{
+        font-size: 80%;
+    }
+    .Booke_A_table_input_person{
+        height: 60%;
+    }
+}
+@media (min-width:665px ) and (max-width:999px){
+    .footer {
+        margin-top: 160px; 
+    }
+}
+@media (min-width:1000px ) and (max-width:1500px){
+    .footer {
+        margin-top: 179px; 
+    }
+}
+@media (max-width: 480px) {
+    .inputGrid {
+        grid-template-columns: 1fr; 
+    }
+
+    .inputFullWidth {
+        grid-column: span 1; 
+    }
+}
+
+
+
+/* -----  Contact ----------- */
+
+
+.thirdSec{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    column-gap: 30px;
+    margin-bottom: 50px;
+    
+}
+.thirdSec h5{
+    font-family:'DM Sans', sans-seri;
+    font-weight: normal;
+    /* width: 60%; */
+    line-height: 2;
+}
+.thirdSec h4{
+    font-family:'DM Sans', sans-seri;
+    font-weight: bold;
+    width: 100%;
+    line-height: 3;
+    color: #ad343e;
+}
+
+@media (max-width:552px){
+    .thirdSec{
+        flex-direction: column;
+        justify-content: start; 
+    }
+    .thirdSec h5, h4, h3{
+        font-size: 80%;
+    }
+   
+}

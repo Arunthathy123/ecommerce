@@ -11,7 +11,7 @@ const Login = () => {
         <div className='card'>
             <div className='firstPart'>
                 <LoginForm />
-                
+                 
             </div>
             <div className='secondpart'>
                 

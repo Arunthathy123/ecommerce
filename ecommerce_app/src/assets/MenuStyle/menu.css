@@ -58,6 +58,9 @@
 }
 
 @media (max-width: 768px) {
+    .first_Section1 h1{
+        font-size: 2rem;
+    }
     .secondSection h5{
         width: 100%;
     }
@@ -89,8 +92,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
     padding: 15px;
     margin-top: 45px;
 }
@@ -106,6 +109,21 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.card_section.active-card {
+    border: 1px solid #dfe3d6;
+    border-radius: 10px;
+    width: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    box-sizing: border-box;
+    transform: scale(1.05); 
+
+}
+
 
 .card_section img{
     width: 100%;
@@ -129,15 +147,11 @@
     width: 80%;
 }
 
-@media (max-width: 5000px) {
-    .card_section {
-        width: calc(24.33% - 20px); /* Adjust width for tablets */
-    }
-}
+
 
 @media (max-width: 768px) {
     .card_section {
-        width: calc(50% - 20px); /* Adjust width for smaller screens */
+        width: calc(50% - 20px); 
     }
 }
 
@@ -146,13 +160,13 @@
         margin-top: 15px;
     }
     .card_section {
-        width: 100%; /* Full width for mobile devices */
+        width: 100%; 
     }
 }
 
 /* ------------------ third Section-------------------------- */
 
-.thirdSection {
+.thirdSectionMenu {
     margin-top: 100px;
     background-color: #f9f9f7;
     display: flex;
@@ -169,6 +183,7 @@
 
 .third_fisrt_div h1 {
     font-family: 'Playfair Display', serif;
+    font-weight: normal;
 }
 
 .third_fisrt_div h6 {
@@ -259,6 +274,9 @@
     .third_second_div {
         grid-template-columns: (3, 1fr); 
     }
+    .white_Cards img {
+        width: 50%;
+   }
 }
 @media(max-width:550px){
     .thirdSection{
@@ -270,7 +288,8 @@
         width: 100%;
     }
     .third_fisrt_div h1{
-        font-size: 1.9rem;
+        font-size: 1.4rem;
+
     }
     .third_second_div {
         grid-template-columns:  1fr; 

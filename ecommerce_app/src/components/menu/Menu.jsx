@@ -152,20 +152,21 @@ export const Menu = () => {
 
             
           <div className='secondSection'>
-              {filterdMenu.map((item, index) => (
-                  <div className='card_section' key={index}>
-                      <img src={item.img} alt={item.name} />
-                      <h3>{item.price}</h3>
-                      <h4>{item.name}</h4>
-                      <h6>{item.description}</h6>
-                  </div>
-              ))}
+          {filterdMenu.map((item, index) => (
+              <div className={`card_section ${activeButton === item.category ? 'active-card' : ''}`} key={index}>
+                  <img src={item.img} alt={item.name} />
+                  <h3>{item.price}</h3>
+                  <h4>{item.name}</h4>
+                  <h6>{item.description}</h6>
+              </div>
+          ))}
+
           </div>
 
 
             {/* ------------- third section -------------- */}
 
-          <div className='thirdSection'>
+          <div className='thirdSectionMenu'>
             <div className='third_fisrt_div'>
               <h1>You can order through apps</h1>
               <h6>Lorem ipsum dolor sit amet consectetur adipiscing elit enim bibendum sed et aliquet aliquet risus tempor semper.</h6>

@@ -21,6 +21,7 @@ import articleImg4 from '../../assets/HomeStyles/articleImg4.png'
 import articleImg5 from '../../assets/HomeStyles/articleImg5.png'
 import CustomerSays from '../commonUtils/CustomerSays';
 import Footer from '../commonUtils/Footer';
+import {  useNavigate } from 'react-router-dom'
 
 const Dishes = [
   {
@@ -101,8 +102,15 @@ const articles = [
 
 
 const Home = () => {
+  const navigate = useNavigate()
   function bookATable(){
-    alert("hai")
+    navigate("/BookeATable")
+  }
+  function exploreMenu(){
+    navigate("/menu")
+  }
+  function readAllArticle(){
+    navigate("/page")
   }
   return (
     <div >
@@ -120,15 +128,15 @@ const Home = () => {
             <img src={homeBckground}/>
             <div className='overlay'>
               <div>
-                <h1 style={{ marginBottom: '0' }}>Best food for</h1>
-                <h1 style={{ marginTop: '-25px' }}>your taste</h1>
-                <h4>Discover delectable cuisine and unforgettable moments </h4>
-                <h4 style={{ marginTop: '-10px' }}>in our welcoming, culinary haven.</h4>
+                <h1 >Best food for
+                your taste</h1>
+                <h4>Discover delectable cuisine and unforgettable moments 
+                in our welcoming, culinary haven.</h4>
               </div>
             
               <div className="HomeImgBtn">
                 <Button type="submit" className="HomeImgBtn-BookATable" buttonValue="Book A Table" onClick={bookATable}/>
-                <Button type="submit" className="HomeImgBtn-ExploreMenu" buttonValue="Explore Menu" onClick={bookATable}/>
+                <Button type="submit" className="HomeImgBtn-ExploreMenu" buttonValue="Explore Menu" onClick={exploreMenu}/>
               </div>
             </div>
           </div>
@@ -157,17 +165,11 @@ const Home = () => {
            {/* --------- third section ----------------- */}
 
 
-        <div className='thirdSection'>
+        <div className='thirdSection' >
           <div className='Img'>
             <img src={thirdImg}/>
           </div>
-          <div className='dialogue'>
-            <h1>We provide healthy food for your family.</h1>
-            <h5>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</h5>
-            <h6>At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</h6>
-          </div>
-        </div>
-          <div className='contactDetails'>
+          {/* <div className='contactDetails'>
             <h3>Come and visit us</h3>
             <br/>
             <div>
@@ -185,7 +187,14 @@ const Home = () => {
               &nbsp;&nbsp; - 837 W.  Lane, Los Angeles
             </div>
             
+          </div> */}
+          <div className='dialogue'>
+            <h1>We provide healthy food for your family.</h1>
+            <h5>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</h5>
+            <h6>At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</h6>
           </div>
+        </div>
+          
 
 
           {/* --------- fourth section ----------------- */}
@@ -209,14 +218,14 @@ const Home = () => {
         {/* --------- fifth section ----------------- */}
 
         <div className='fifthSection'>
-          <div className='shefImg'>
-            <img src={shefImg}/>
-          </div>
-          <div className='dishes'>
-            <img src={dish1} className='dish1'/>
-            <img src={dish2} className='dish2'/>
-            
-            
+          <div className='imgesHomeFifth'>
+            <div className='shefImg'>
+              <img src={shefImg}/>
+            </div>
+            <div className='dishes'>
+              <img src={dish1} className='dish1'/>
+              <img src={dish2} className='dish2'/> 
+            </div>
           </div>
           <div>
             <div className='dialogue2'>
@@ -251,7 +260,7 @@ const Home = () => {
         <div className='seventhSection'>
           <div className='articleHead'>
             <h1>Our Blog & Articles</h1>
-            <Button className="articleBtn" buttonValue="Read All Articles" onClick={bookATable} type="submit"/>
+            <Button className="articleBtn" buttonValue="Read All Articles" onClick={readAllArticle} type="submit"/>
           </div>
           <div className='articleCards'>
             <div className='firstImg'>

@@ -59,7 +59,7 @@ function About() {
   const handlePause = () => {
     setIsPlaying(false); 
   };
-
+ 
   return (
     <div>
       <div>
