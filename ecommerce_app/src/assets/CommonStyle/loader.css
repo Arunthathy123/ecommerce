@@ -1,7 +1,12 @@
 
-
+.loadLoad{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loadingLoader {
-    position: fixed;
+    /* position: fixed; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
